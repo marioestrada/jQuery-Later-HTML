@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>jQuery Later HTML</title>
+</head>
+<body>
+
+<h2>jQuery Later HTML tests</h2>
+
+<script type="text/x-later-html" data-delay="2000">
+	<h1>This should appear after 2 seconds</h1>
+
+	<l:script type="text/javascript">
+		console.log('delayed element');
+	</l:script>
+</script>
+
+<script type="text/x-later-html">
+	<h1>jQuery Later HTML</h1>
+	
+	<ol>
+		<li id="test1">A</li>
+		<li id="test2">B</li>
+		<li id="test3">C</li>
+	</ol>
+	
+	<l:script type="text/javascript">
+		console.log('first element');
+	</l:script>
+</script>
+
+<div style="background: #f0f0f0; height: 700px">Blank space</div>
+
+<script type="text/x-later-html" data-inview="1" data-placeholder-height="100" data-delay="1000">
+	<div style="background: red; height: 100px;">When in view</div>
+	<l:script>console.log('show red banner')</l:script>
+</script>
+
+<div style="background: #f0f0f0; height: 700px">Blank space</div>
+
+<script type="text/x-later-html" data-inview="1">
+	<!-- !Facebook -->
+	<iframe src="http://www.facebook.com/plugins/like.php?app_id=115990251830288&amp;href&amp;send=false&amp;layout=button_count&amp;width=95&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:95px; height:21px;" allowTransparency="true"></iframe>
+
+	<!-- !Twitter -->
+	<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="techspot" data-related="juliofranco:TechSpot Executive Editor">Tweet</a><l:script type="text/javascript" src="http://platform.twitter.com/widgets.js"></l:script>
+
+	<!-- !Plus one -->
+	<!-- Place this tag where you want the +1 button to render -->
+	<g:plusone size="medium"></g:plusone>
+
+	<!-- Place this tag after the last plusone tag -->
+	<l:script type="text/javascript">
+	  (function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+	</l:script>
+	
+	<l:script>console.log('show social')</l:script>
+</script>
+
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="jquery.later.html.js"></script>
+</body>
+</html>
