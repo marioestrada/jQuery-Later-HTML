@@ -18,6 +18,8 @@ To defer HTML elements just insert the code inside a `script` tag with the `src`
 
 You can delay the insertion of the HTML elements (after some milliseconds), set for the elements to load when they are inside the viewport and set the width and height of the placeholder wrapper:
 
+_\* Every property is optional_
+
 ```html
 <script type="text/deferred-javascript" data-delay="1000" data-inview="1" data-placeholder-height="50" data-placeholder-width="100">
 	<div>
